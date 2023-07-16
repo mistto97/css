@@ -26,19 +26,20 @@
         <img class="w-[15vh] aspect-square" :src="logo" />
       </div>
       <button @click="toggleNav" class="lg:hidden text-white text-black z-40">
-        <img class="md:w-[7vw] w-[10vw] aspect-square" :src="menu" alt />
+        <img v-if="menuOpen" class="md:w-[7vw] w-[10vw] aspect-square" :src="menu2" alt />
+        <img v-else class="md:w-[7vw] w-[10vw] aspect-square" :src="menu" alt />
       </button>
     </nav>
     <div
       class="bg-cover h-screen w-screen lg:bg-[url('./assets/covers/cover.jpg')] bg-[url('./assets/covers/small-cover.jpg')] bg-top bg-no-repeat pt-[15vh]"
     >
       <div
-        class="lg:w-1/2 w-full lg:pl-28 px-5 mt-[10vh] text-white"
+        class="lg:w-1/2 w-full lg:pl-28 md:px-[10vw] px-5 mt-[10vh] text-white"
         data-aos="fade-right"
         data-aos-duration="1000"
       >
         <h1
-          class="xl:text-[10vh] lg:text-[8vh] md:text-[6vh] text-[5vh] leading-[1.1] font-secondary font-extrabold"
+          class="xl:text-[8vh] lg:text-[8vh] md:text-[6vh] text-[5vh] leading-[1.1] font-secondary font-extrabold"
         >{{ heroPage.title }}</h1>
         <p
           class="lg:text-[3vh] lg:my-[5vh] md:text-[3vh] text-[3vh] md:my-[4vh] my-[5vh] leading-[1.3] font-nunito"
@@ -77,7 +78,7 @@
           alt
         />
         <img
-          class="absolute xl:w-[13vh] bottom-[19%] left-[30%] lg:w-[20vh] md:[13vh] w-[8vh] aspect-square"
+          class="absolute xl:w-[13vh] bottom-[19%] md:left-[30%] left-[4vw] lg:w-[20vh] md:[13vh] w-[8vh] aspect-square"
           :src="leafSvg"
           alt
         />
@@ -108,7 +109,7 @@
         class="flex lg:flex-row flex-col lg:w-auto lg:justify-around justify-center lg:content-around content-center items-center lg:px-14"
       >
         <div
-          class="lg:w-2/5 w-[30vh] flex justify-end"
+          class="lg:w-[18vw] w-[30vh] flex justify-end"
           data-aos="fade-right"
           data-aos-duration="1000"
         >
@@ -208,7 +209,10 @@
         <p class="md:text-[3vh] w-8/12 md:mb-[5vh] mb-[2vh] font-nunito">{{ statisticsPage.text }}</p>
         <div class="flex md:flex-row flex-col md:gap-[7vw] gap-[2vh] flex-wrap">
           <div v-for="(counter, index) in counters" :key="index" class="statistic">
-            <p class="statistic-number">{{counter.value}}k</p>
+            <p class="statistic-number">
+              {{counter.value}}
+              <span v-if="index==0">k</span>
+            </p>
             <p class="statistic-name">{{ counter.name }}</p>
           </div>
         </div>
@@ -256,7 +260,7 @@
           data-aos-duration="1000"
         >{{ popularPackagePage.title }}</h2>
         <div
-          class="flex w-full md:flex-row md:justify-around justify-between items-center md:flex-wrap flex-col px-[2vw]"
+          class="flex w-full md:flex-row md:justify-around justify-between items-center md:flex-wrap flex-col gap-[2vh] px-[2vw]"
           data-aos="fade-up"
           data-aos-duration="1000"
         >
@@ -302,12 +306,12 @@
           alt
         />
         <img
-          class="absolute xl:w-[9.5vh] scale-x-[-1] lg:w-[14vh] md:w-[6vh] w-[4vh] aspect-square lg:top-[40vh] top-[20vh] left-[5vw]"
+          class="absolute xl:w-[9.5vh] scale-x-[-1] lg:w-[14vh] md:w-[6vh] w-[4vh] aspect-square lg:top-[40vh] top-[30vh] left-[5vw]"
           :src="mashroomSvg"
           alt
         />
         <img
-          class="absolute xl:w-[23vh] bottom-[12vh] left-[7vw] lg:w-[20vh] md:w-[13vh] w-[9vh] aspect-square"
+          class="absolute xl:w-[23vh] md:bottom-[12vh] bottom-[3vh] left-[7vw] lg:w-[20vh] md:w-[13vh] w-[9vh] aspect-square"
           :src="potatoSvg"
           alt
         />
@@ -323,7 +327,7 @@
         />
       </div>
       <div
-        class="flex flex-col text-center gap-[7vh] lg:gap-[4vh]"
+        class="flex flex-col text-center gap-[2vh] md:gap-[7vh] lg:gap-[4vh]"
         data-aos="fade"
         data-aos-duration="1000"
       >
@@ -419,6 +423,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import logo from "./assets/logos/logo.png";
 import menu from "./assets/icons/menu.svg";
+import menu2 from "./assets/icons/menu2.svg";
 
 import chef1 from "./assets/images/chefs/chef1.png";
 import chef2 from "./assets/images/chefs/chef2.png";
@@ -440,34 +445,36 @@ export default {
   data: () => ({
     logo: logo,
     menu: menu,
+    menu2: menu2,
     burgerSvg: burger,
     pepperSvg: pepper,
     mashroomSvg: mashroom,
     potatoSvg: potato,
     garlicSvg: garlic,
     leafSvg: leaf,
-    counterValue: 0,
+
+    menuOpen: false,
 
     navLinks: [
       {
         title: "Home",
-        link: "https://www.google.com"
+        link: "#"
       },
       {
         title: "PRODUCT",
-        link: "https://www.google.com"
+        link: "#"
       },
       {
         title: "PROMO",
-        link: "https://www.google.com"
+        link: "#"
       },
       {
         title: "ABOUT",
-        link: "https://www.google.com"
+        link: "#"
       },
       {
         title: "CONTACT",
-        link: "https://www.google.com"
+        link: "#"
       }
     ],
     heroPage: {
@@ -564,40 +571,40 @@ export default {
         socials: [
           {
             name: "Instagram",
-            link: "https://www.google.com",
+            link: "#",
             icon: instagram
           },
-          { name: "Facebook", link: "https://www.google.com", icon: facebook },
-          { name: "Twitter", link: "https://www.google.com", icon: twitter },
-          { name: "Whatsapp", link: "https://www.google.com", icon: whatsap }
+          { name: "Facebook", link: "#", icon: facebook },
+          { name: "Twitter", link: "#", icon: twitter },
+          { name: "Whatsapp", link: "#", icon: whatsap }
         ]
       },
       about: {
         title: "About",
         links: [
-          { text: "History", link: "https://www.google.com" },
-          { text: "Our Team", link: "https://www.google.com" },
-          { text: "Brand Guidelines", link: "https://www.google.com" },
-          { text: "Terms & Condition", link: "https://www.google.com" },
-          { text: "Privacy Policy", link: "https://www.google.com" }
+          { text: "History", link: "#" },
+          { text: "Our Team", link: "#" },
+          { text: "Brand Guidelines", link: "#" },
+          { text: "Terms & Condition", link: "#" },
+          { text: "Privacy Policy", link: "#" }
         ]
       },
       services: {
         title: "Services",
         links: [
-          { text: "How to Order", link: "https://www.google.com" },
-          { text: "Our Product", link: "https://www.google.com" },
-          { text: "Order Status", link: "https://www.google.com" },
-          { text: "Promo", link: "https://www.google.com" },
-          { text: "Payment Method", link: "https://www.google.com" }
+          { text: "How to Order", link: "#" },
+          { text: "Our Product", link: "#" },
+          { text: "Order Status", link: "#" },
+          { text: "Promo", link: "#" },
+          { text: "Payment Method", link: "#" }
         ]
       },
       other: {
         title: "Other",
         links: [
-          { text: "Contact Us", link: "https://www.google.com" },
-          { text: "Help", link: "https://www.google.com" },
-          { text: "Privacy", link: "https://www.google.com" }
+          { text: "Contact Us", link: "#" },
+          { text: "Help", link: "#" },
+          { text: "Privacy", link: "#" }
         ]
       }
     },
@@ -609,6 +616,9 @@ export default {
       const nav = document.querySelector("#small-nav");
       nav.classList.toggle("show-nav");
       nav.classList.toggle("hide-nav");
+      nav.classList.toggle("shad");
+
+      this.menuOpen = !this.menuOpen;
     },
 
     animateCounter() {
@@ -689,5 +699,8 @@ export default {
     rgba(0, 0, 0, 0.65),
     rgba(0, 0, 0, 0)
   );
+}
+.shad {
+  box-shadow: -10px 0px 50px 1px #000000;
 }
 </style>

@@ -88,13 +88,13 @@
 
 }
 .statistic{
-  @apply aspect-square border-4 border-white rounded-full lg:w-[39vh] md:w-[18vh] w-[14vh] flex flex-col items-center justify-center
+  @apply aspect-square border-4 border-white rounded-full lg:w-[20vw] md:w-[18vh] w-[14vh] flex flex-col items-center justify-center
 }
 .statistic-number{
-  @apply lg:text-[12.8vh] md:text-[7vh] text-[3vh] font-bold md:leading-[110px]
+  @apply lg:text-[7vw] md:text-[7vh] text-[3vh] font-bold md:leading-[110px]
 }
 .statistic-name{
-  @apply lg:text-[4.4vh] md:text-[2vh] text-[1.5vh] font-bold
+  @apply lg:text-[2vw] md:text-[2vh] text-[1.5vh] font-bold
 }
 
 /* page 5 */
@@ -104,37 +104,37 @@
 
 }
 .package{
-  @apply lg:w-[46vh]  md:w-[27vh] md:mx-0 md:h-auto h-auto w-[50vw]  lg:py-[4vh] py-[1.5vh] md:py-[1.8vh] my-[1vh] px-[2vw] lg:gap-[1.8vh] md:gap-[1vh] gap-[0.6vh] bg-white flex flex-col items-center text-center rounded-xl 
+  @apply lg:w-[24vw]  md:w-[27vh] md:mx-0 md:h-auto h-auto w-[50vw]  lg:py-[3vh] py-[1.5vh] md:py-[1.8vh] my-[1vh] px-[2vw] lg:gap-[1.5vh] md:gap-[1vh] gap-[1vh] bg-white flex flex-col items-center text-center rounded-xl 
 }
 /* .package{
   @apply lg:w-[46vh]  md:w-[27vh] md:mx-0 w-[38vw]  lg:py-[4vh] py-[2vh] md:py-[1.8vh] my-[1vh] px-[1vw] lg:gap-[1.8vh] md:gap-[1vh] gap-[0.6vh] bg-white flex flex-col items-center text-center rounded-xl 
 } */
 .package-title{
-  @apply md:text-[2.8vh] lg:text-[4.8vh] text-[2.1vh] uppercase font-semibold 
+  @apply md:text-[1.4vw] lg:text-[4.8vh] text-[2.8vh] uppercase font-semibold 
 }
 /* .package-title{
   @apply md:text-[2.8vh] lg:text-[4.8vh] text-[2.4vh] uppercase font-semibold 
 } */
 .package-img{
-  @apply lg:w-[14vh] md:w-[9vh] w-[5vh]
+  @apply lg:w-[7vw] md:w-[9vh] w-[6.5vh]
 }
 /* .package-img{
   @apply lg:w-[14vh] md:w-[9vh] w-[8vh]
 } */
 .package-price{
-  @apply font-bold tracking-tighter text-[2vh] md:text-[2vh] lg:text-[4vh]
+  @apply font-bold tracking-tighter text-[3vh] md:text-[2vh] lg:text-[2vw]
 }
 /* .package-price{
   @apply font-bold tracking-tighter text-[2.2vh] md:text-[2vh] lg:text-[4vh]
 } */
 .package-des{
-  @apply md:text-[1.6vh] lg:text-[3vh] text-[1.5vh] font-nunito leading-tight  pb-[0.6vh]
+  @apply md:text-[1.6vh] lg:text-[1.5vw] text-[2vh] font-nunito leading-tight  pb-[0.6vh]
 }
 /* .package-des{
   @apply md:text-[1.6vh] lg:text-[3vh] text-[1.7vh] font-nunito leading-tight 
 } */
 .package-button{
-  @apply md:px-[21%] px-[15%] lg:py-[2vh] md:py-[0.8vh] py-[0.6vh] md:text-[1.9vh] lg:text-[3.1vh] text-[1.3vh] uppercase font-bold bg-[#f64b3c] text-white rounded-full
+  @apply md:px-[21%] px-[20%] lg:py-[2vh] md:py-[0.8vh] py-[1vh] md:text-[1.9vh] lg:text-[1.6vw] text-[1.6vh] uppercase font-bold bg-[#f64b3c] text-white rounded-full
 }
 /* .package-button{
   @apply md:px-[24%] px-[15%] lg:py-[2vh] md:py-[0.8vh] py-[0.8vh] md:text-[1.9vh] lg:text-[3.3vh] text-[1.6vh] uppercase font-bold bg-[#f64b3c] text-white rounded-full
@@ -143,13 +143,13 @@
 /* page 6 */
 
 .page-6{
-  @apply  md:h-screen h-auto object-cover bg-bottom bg-cover w-[100%]  bg-no-repeat relative pt-[15vh] pb-[10vh] flex flex-col text-center overflow-hidden justify-center gap-[7vh] bg-opacity-50 items-center font-secondary content-center text-white 
+  @apply  md:h-screen h-auto object-cover bg-bottom bg-cover w-[100%]  bg-no-repeat relative pt-[15vh] md:pb-[10vh] pb-[15vh] flex flex-col text-center overflow-hidden justify-center gap-[7vh] bg-opacity-50 items-center font-secondary content-center text-white 
 }
 
 /* page 7 */
 
 .page-7{
-  @apply  md:h-screen h-auto  w-[100%] relative bg-[#f6eedf] pt-[15vh] pb-[10vh] flex overflow-hidden justify-center items-center font-secondary content-center text-[#f64b3c] 
+  @apply  md:h-screen h-auto  w-[100%] relative bg-[#f6eedf] pt-[15vh] md:pb-[10vh] pb-[15vh] flex overflow-hidden justify-center items-center font-secondary content-center text-[#f64b3c] 
 
 }
 

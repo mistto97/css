@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
+
 import './index.css'
 import mdiVue from 'mdi-vue/v2'
 
@@ -15,7 +15,7 @@ Vue.use(mdiVue, {
 }) 
 
 new Vue({
-  router,
+  
   
   render: h => h(App)
 }).$mount('#app')
