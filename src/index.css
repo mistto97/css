@@ -23,6 +23,12 @@
     scroll-behavior: smooth;
 
 }
+.show-nav {
+  @apply w-[90vw];
+}
+.hide-nav {
+  @apply w-0;
+}
   
 .scrl-snap-child{
     scroll-snap-align: start;

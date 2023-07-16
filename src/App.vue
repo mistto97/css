@@ -690,10 +690,4 @@ export default {
     rgba(0, 0, 0, 0)
   );
 }
-.show-nav {
-  @apply w-[90vw];
-}
-.hide-nav {
-  @apply w-0;
-}
 </style>
