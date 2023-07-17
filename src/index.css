@@ -38,7 +38,7 @@
   /* hero  */
 
   .nav-bar {
-    @apply fixed top-0 flex lg:flex-row-reverse z-40 h-[15vh] w-full  text-white justify-between lg:items-end sm:pr-24 pr-8 sm:pl-10 pl-2;
+    @apply fixed top-0 flex lg:flex-row-reverse z-40 h-[15vh] w-full  text-white justify-between lg:items-end sm:pr-12 pr-4 sm:pl-10 pl-2;
   }
 
 
@@ -110,7 +110,7 @@
   @apply lg:w-[46vh]  md:w-[27vh] md:mx-0 w-[38vw]  lg:py-[4vh] py-[2vh] md:py-[1.8vh] my-[1vh] px-[1vw] lg:gap-[1.8vh] md:gap-[1vh] gap-[0.6vh] bg-white flex flex-col items-center text-center rounded-xl 
 } */
 .package-title{
-  @apply md:text-[1.4vw] lg:text-[4.8vh] text-[2.8vh] uppercase font-semibold 
+  @apply md:text-[1.4vw] lg:text-[4.5vh] text-[2.8vh] uppercase font-semibold 
 }
 /* .package-title{
   @apply md:text-[2.8vh] lg:text-[4.8vh] text-[2.4vh] uppercase font-semibold 

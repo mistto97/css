@@ -25,13 +25,13 @@
       <div class="py-1 z-40">
         <img class="w-[15vh] aspect-square" :src="logo" />
       </div>
-      <button @click="toggleNav" class="lg:hidden text-white text-black z-40">
+      <button @click="toggleNav" class="lg:hidden text-white text-black px-4 z-40">
         <img v-if="menuOpen" class="md:w-[7vw] w-[10vw] aspect-square" :src="menu2" alt />
         <img v-else class="md:w-[7vw] w-[10vw] aspect-square" :src="menu" alt />
       </button>
     </nav>
     <div
-      class="bg-cover h-screen w-screen lg:bg-[url('./assets/covers/cover.jpg')] bg-[url('./assets/covers/small-cover.jpg')] bg-top bg-no-repeat pt-[15vh]"
+      class="bg-cover h-screen w-screen lg:bg-[url('./assets/covers/cover.jpg')] bg-[url('./assets/covers/small_cover.jpg')] bg-top bg-no-repeat pt-[15vh]"
     >
       <div
         class="lg:w-1/2 w-full lg:pl-28 md:px-[10vw] px-5 mt-[10vh] text-white"
@@ -109,7 +109,7 @@
         class="flex lg:flex-row flex-col lg:w-auto lg:justify-around justify-center lg:content-around content-center items-center lg:px-14"
       >
         <div
-          class="lg:w-[18vw] w-[30vh] flex justify-end"
+          class="lg:w-2/5 w-[30vh] flex justify-end"
           data-aos="fade-right"
           data-aos-duration="1000"
         >
@@ -413,7 +413,6 @@
         </div>
       </div>
     </div>
-    <router-view />
   </div>
 </template>
 
@@ -694,11 +693,7 @@ export default {
     url("./assets/covers/page_6_cover.jpg");
 }
 .nav-bg {
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0.65),
-    rgba(0, 0, 0, 0)
-  );
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
 }
 .shad {
   box-shadow: -10px 0px 50px 1px #000000;
