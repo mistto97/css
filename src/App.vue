@@ -200,14 +200,18 @@
 
     <div class="page-4">
       <div
-        data-aos="zoom-in"
+        data-aos="fade"
         data-aos-duration="1000"
         ref="counterSection"
         class="flex flex-col justify-center content-center items-center gap-[2vh] mb-[3vh] lg:mx-[5vw] mx-[0.5vw]"
       >
         <h2 class="md:text-[8vh] text-[5vh] font-bold">{{ statisticsPage.title }}</h2>
         <p class="md:text-[3vh] w-8/12 md:mb-[5vh] mb-[2vh] font-nunito">{{ statisticsPage.text }}</p>
-        <div class="flex md:flex-row flex-col md:gap-[7vw] gap-[2vh] flex-wrap">
+        <div
+          class="flex md:flex-row flex-col md:gap-[7vw] gap-[2vh] flex-wrap"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <div v-for="(counter, index) in counters" :key="index" class="statistic">
             <p class="statistic-number">
               {{counter.value}}
@@ -338,7 +342,7 @@
           class="lg:w-[50vw] px-[2vw] md:text-[2.8vh] lg:text-[3.5vh] text-center mx-auto font-nunito mb-[5vh]"
         >{{ updatePage.text }}</p>
         <div
-          class="lg:w-[52vw] lg:mx-auto mx-[5vw] text-[1.5vh] md:text-[2.3vh] lg:text-[3.1vh] rounded-full overflow-hidden font-nunito"
+          class="lg:w-[52vw] lg:mx-auto mx-[5vw] text-[1.5vh] md:text-[2.3vh] lg:text-[2.4vh] xl:text-[3.1vh] rounded-full overflow-hidden font-nunito"
         >
           <input
             type="text"
@@ -456,7 +460,7 @@ export default {
 
     navLinks: [
       {
-        title: "Home",
+        title: "HOME",
         link: "#"
       },
       {

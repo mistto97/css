@@ -88,13 +88,13 @@
 
 }
 .statistic{
-  @apply aspect-square border-4 border-white rounded-full lg:w-[20vw] md:w-[18vh] w-[14vh] flex flex-col items-center justify-center
+  @apply aspect-square border-4 border-white rounded-full lg:w-[20vw] md:w-[18vh] w-[40vw] flex flex-col items-center justify-center
 }
 .statistic-number{
-  @apply lg:text-[7vw] md:text-[7vh] text-[3vh] font-bold md:leading-[110px]
+  @apply lg:text-[7vw] md:text-[5vh] text-[5vh] font-bold lg:leading-[110px]
 }
 .statistic-name{
-  @apply lg:text-[2vw] md:text-[2vh] text-[1.5vh] font-bold
+  @apply lg:text-[2vw] md:text-[2vh] text-[2.2vh] font-bold
 }
 
 /* page 5 */
